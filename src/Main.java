@@ -9,13 +9,17 @@ public class Main {
 
     public static void fight(Creature cr1, Creature cr2){
         while (cr1.getHp() > 0 & cr2.getHp() > 0) {
-            cr1.attack(cr2);
-            cr2.attack(cr1);
+
+
             if(cr1.getHp() <= 0){
                 System.out.println(cr2.getClass().getSimpleName() + " Win~!");
+            }else{
+                cr1.attack(cr2);
             }
             if(cr2.getHp() <= 0){
                 System.out.println(cr1.getClass().getSimpleName() + " Win~!");
+            }else{
+                cr2.attack(cr1);
             }
         }
     }
